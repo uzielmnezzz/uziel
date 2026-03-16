@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+    color: azure;
+    width: 100%;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 24px 16px;
+    overflow: hidden;
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #e9da0a;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(0, 0, 0);
+}
+
+.greetings{
+    font-size: clamp(2.6rem, 12vw, 7rem);
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.05;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #e9da0a, 0 0 50px #e9da0a, 0 0 100px #e9da0a;
+    }
+    10%, 90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+
+.description{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 640px;
+    padding: 0 8px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+        font-size: 3rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 1.08rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
